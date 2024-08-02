@@ -15,7 +15,8 @@ package org.msd.leetcode.examples
  * Output: ["1", "2", "Fizz", "4", "Buzz"];
  */
     fun main() {
-        val input = 15
+        println("Enter Input: (Integer) ")
+        val input = readln().toInt()
         val output = mutableListOf<String>()
         for (i in 1..input) {
             if (i % 15 == 0) {
