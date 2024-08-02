@@ -17,21 +17,21 @@ package org.msd.leetcode.examples
     fun main() {
         val input = 15
         val output = mutableListOf<String>()
-        for (i in 0 until input) {
-            if ((i+1) % 15 == 0) {
+        for (i in 1..input) {
+            if (i % 15 == 0) {
                 output.add("FizzBuzz")
                 continue
             }
-            if ((i+1) % 3 == 0) {
+            if (i % 3 == 0) {
                 output.add("Fizz")
                 continue
             }
-            if ((i+1) % 5 == 0) {
+            if (i % 5 == 0) {
                 output.add("Buzz")
                 continue
             }
 
-            output.add("${i + 1}")
+            output.add("$i")
 
         }
 
