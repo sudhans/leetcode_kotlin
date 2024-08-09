@@ -1,14 +1,14 @@
 package org.msd.leetcode.examples
 
 fun main() {
-    val input = listOf(10, 15, 20, 12, 13, 8, 1, 30)
+    val input = listOf(10, 20, 13, 33, 17, 21)
 
-    input.stream()
+    input
         .distinct()
-        .sorted { a, b -> b - a }
-        .skip(1)
-        .findFirst()
-        .ifPresent {
+        .sortedDescending()
+        .drop(1)
+        .firstOrNull()
+        ?.let {
             println(" Second Highest Number is $it") // 20
-        }
+        } ?: println ("We need a list with at least 2 numbers")
 }
